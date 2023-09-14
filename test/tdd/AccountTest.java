@@ -1,58 +1,51 @@
-// package tdd;
-//
-//import org.junit.jupiter.api.Test;
-//
-//import static org.junit.jupiter.api.Assertions.*;
-//
-//class AccountTest {
-//
-//
-//    @Test
-//    public void testThatAccountIsNotNull(){
-//        Account muyiwa = new Account(0);
-//        assertNotNull(muyiwa);
-//    }
-//    @Test
-//    public void testThatTheAccountCanDesposit(){
-//
-//        //given
-//        Account muyiwa = new Account(0);
-//
-//        //when
-//        muyiwa.deposit(5000);
-//        //expect
-//        assertEquals(5000, muyiwa.checkBalance());
-//    }
-//    @Test
-//     public void testThatTheAccountCanDepositTwice(){
-//     //given
-//    Account muyiwa = new Account(0);
-//
-//    //When
-//       muyiwa.deposit(2000);
-//       muyiwa.deposit(5000);
-//       //expect
-//    assertEquals(7000, muyiwa.checkBalance());
-//    }
-//
-//    @Test
-//    public void testThatAccountCaWithdraw(){
-//
-//        //given
-//        Account muyiwa = new Account(2500);
-//        //when
-//        muyiwa.withdraw(1000);
-//        //expect
-//        assertEquals(1500, muyiwa.checkBalance());
-//    }
-//    @Test
-//    public void testThatAccountCanWithdrawGreaterThanBalance(){
-////        given
-//        Account muyiwa = new Account(2500);
-////        when
-//        muyiwa.withdraw(3500);
-////        expect
-//        assertEquals(2500, muyiwa.checkBalance());
-//    }
-//
-//}
+package tdd;
+
+import org.junit.jupiter.api.Test;
+import tdd.Account;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+public class AccountTest {
+    @Test
+    public void accountExist(){
+        //given
+        Account myAccount = new Account();
+        assertNotNull(myAccount);
+    }
+    @Test
+    public void accountCanDeposit(){
+        //given
+        Account myAccount = new Account();
+        //when i deposit 5k
+        myAccount.deposit(5000);
+        //check that my balance is 5k
+        int balance = myAccount.checkBalance();
+        assertEquals(5000, balance);
+    }
+    @Test
+    public void accountDepositTwice(){
+        //given
+        Account myAccount = new Account();
+        //when i deposit 5k twice
+        myAccount.deposit(5000);
+        myAccount.deposit(5000);
+        //check that my balance is 10k
+        int balance = myAccount.checkBalance();
+        System.out.println(balance);
+        assertEquals(10000, balance);
+    }
+    @Test
+    public void accountWithdrawal(){
+        //give
+        Account myAccount = new Account();
+        //when i deposited 20000
+        myAccount.deposit(20000);
+        //check that i withdraw 15000
+        myAccount.withdraw(15000);
+        //check my balance
+        int balance = myAccount.checkBalance();
+        System.out.println(balance);
+        assertEquals(15000, balance);
+    }
+}
