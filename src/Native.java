@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Naitve {
+public class Native {
 
     public static void main(String[] args) {
 
