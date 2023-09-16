@@ -1,4 +1,4 @@
-package chapter3;
+package assignment;
 
 public class School1 {
 

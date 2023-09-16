@@ -1,6 +1,5 @@
-package chapter3;
+package assignment;
 
-import chapter3.Bikes;
 import org.testng.annotations.Test;
 
 import static org.junit.Assert.*;

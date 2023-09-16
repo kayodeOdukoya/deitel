@@ -1,4 +1,4 @@
-package chapter4;
+package assignment;
 
 public class TwelveDaysOfXmas {
     public static void main(String[] args) {
