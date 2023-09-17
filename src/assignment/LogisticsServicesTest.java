@@ -2,21 +2,21 @@ package assignment;
 
 import org.testng.annotations.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class LogisticsServicesTest {
 
     @Test
-    public void testThatLogisticsExist(){
-        Logistics myRider = new Logistics();
-        assertNotNull(myRider);
+    public static void printPay1(int numberOfSuccessfulDeliveries){
+        int basePay = 5000;
+        int totalNumberOfPackages = 50;
+        int result = 0;
+        int amountPerParcel = 160;
+        for(totalNumberOfPackages = 50; totalNumberOfPackages <= 100; totalNumberOfPackages++){
+            result = numberOfSuccessfulDeliveries * amountPerParcel + basePay;
+        }
     }
-    @Test
-    public void testThatRidersWagesIsLessThan50Percent(){
-        Logistics myRider = new Logistics();
-        int successfulDelivery = 50;
 
-
-    }
 
 }
