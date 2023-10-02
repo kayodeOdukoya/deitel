@@ -1,4 +1,4 @@
-package assignment;
+package chapter7;
 import java.util.Scanner;
 
 public class NokiaPhone {
