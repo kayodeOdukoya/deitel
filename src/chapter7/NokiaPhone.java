@@ -15,13 +15,14 @@ public class NokiaPhone {
         System.out.println("""
                 welcome to nokia 
                 press 1 for main menu
-                press # to quit: 
+                press # to quit:  
                 """);
         int response = scanner.nextInt();
         if(response == 1){
             mainMenu();
         }
     }
+
 
     public void mainMenu() {
         System.out.println("""
